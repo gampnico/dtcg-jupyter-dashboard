@@ -93,12 +93,8 @@ tests = [
 dtcg = { git = "https://github.com/dtc-glaciers/dtcg" }
 oggm = { git = "https://github.com/gampnico/oggm@feat-dtcg" }
 
-[tool.uv.build-backend]
-module-name="dtcg_jupyter_dashboard"
-module-root="src"
 
 [tool.hatch.build.targets.sdist]
-packages = ["src/dtcg_jupyter_board"]
 exclude = [
     "logs",
     "*.png",
@@ -109,8 +105,6 @@ exclude = [
     "*.sh",
 ]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/dtcg_jupyter_board"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
